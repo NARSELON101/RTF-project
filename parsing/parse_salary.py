@@ -6,13 +6,14 @@ import matplotlib.pyplot as plt
 
 SALARY_DYNAMIC_BY_YEAR_DICT = {}
 VACANCIES_COUNT_BY_YEAR_DICT = {}
+SALARY_DYNAMIC_BY_CITY = {}
+VACANCIES_PERCENT_BY_CITY = {}
+
 SALARY_DYNAMIC_BY_YEAR_AND_KEY_DICT = {}
 VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT = {}
-#
-# LABELS_TO_PLOTS = {SALARY_DYNAMIC_BY_YEAR_DICT: "Динамика уровня зарплат по годам",
-#                    VACANCIES_COUNT_BY_YEAR_DICT: "Динамика количества вакансий по годам",
-#                    SALARY_DYNAMIC_BY_YEAR_AND_KEY_DICT: "Динамика уровня зарплат по годам для выбранной профессии",
-#                    VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT: "Динамика количества вакансий по годам для выбранной профессии"}
+SALARY_DYNAMIC_BY_CITY_AND_KEY = {}
+VACANCIES_PERCENT_BY_CITY_AND_KEY = {}
+
 
 def format_date(text):
     date = datetime.datetime.strptime(text, "%Y-%m-%dT%H:%M:%S%z")
@@ -90,15 +91,14 @@ def vacancies_count_by_year_and_key(df_, vacancies_count_by_year_and_k_dict):
     return df_
 
 
-def salary_by_city(df_, vacancy_name):
-    valid_cities = df_[df_.name.str.contains(vacancy_name, case=False)]
-    vacancies_count_by_city = valid_cities.groupby("area_name").size()
+def salary_by_city(df_, salary_dynamic_by_city):
+    vacancies_count_by_city = df_.groupby("area_name").size()
 
-    vacancies_count = len(valid_cities)
+    vacancies_count = len(df_)
     vacancies_count_by_city = vacancies_count_by_city[(vacancies_count_by_city / vacancies_count) > 0.01]
 
-    valid_cities = valid_cities[valid_cities['area_name'].isin(vacancies_count_by_city.index)]
-    valid_cities_mean_salaries = valid_cities.groupby("area_name")['mean_salary'].mean().apply(math.floor)
+    df_ = df_[df_['area_name'].isin(vacancies_count_by_city.index)]
+    valid_cities_mean_salaries = df_.groupby("area_name")['mean_salary'].mean().apply(math.floor)
 
     sorted_dict = {key: value for key, value in sorted(valid_cities_mean_salaries.to_dict().items(),
                                                        key=lambda x: (x[1]),
@@ -112,15 +112,15 @@ def salary_by_city(df_, vacancy_name):
         out_dict[key] = value
         i += 1
 
-    print("Уровень зарплат по городам для выбранной профессии (в порядке убывания):", out_dict)
+    salary_dynamic_by_city.update(out_dict)
+
     return df_
 
 
-def vacancies_percent_by_city(df_, vacancy_name):
-    valid_cities = df_[df_.name.str.contains(vacancy_name, case=False)]
-    vacancies_count_by_city = valid_cities.groupby("area_name").size()
+def vacancies_percent_by_city(df_, vacancies_percent_by_city_dict):
+    vacancies_count_by_city = df_.groupby("area_name").size()
 
-    vacancies_count = len(valid_cities)
+    vacancies_count = len(df_)
     vacancies_count_by_city = vacancies_count_by_city[(vacancies_count_by_city / vacancies_count) > 0.01]
 
     out_dict = (vacancies_count_by_city
@@ -128,28 +128,34 @@ def vacancies_percent_by_city(df_, vacancy_name):
 
     out_dict = {key: round(value, 4) for key, value in out_dict.items()}
     out_dict = {key: value for key, value in sorted(out_dict.items(), key=lambda x: (x[1]), reverse=True)[0:10]}
-    print("Доля вакансий по городам для выбранной профессии (в порядке убывания):", out_dict)
+
+    vacancies_percent_by_city_dict.update(out_dict)
 
 
-def fill_dicts_all_vacancies(salary_dynamics_by_year, vacancies_count_by_year_df):
+def fill_dicts_all_vacancies(salary_dynamics_by_year, vacancies_count_by_year_df,
+                             salary_dynamic_by_city, vacancies_percent):
     all_vacancies = pd.read_csv("vacancies.csv")
     (all_vacancies
      [(all_vacancies.salary_currency == "RUR")]
      .pipe(fill_mean_salary)
      .pipe(lambda x: salary_dynamic_by_year(x, salary_dynamics_by_year))
-     .pipe(lambda x: vacancies_count_by_year(x, vacancies_count_by_year_df)))
+     .pipe(lambda x: vacancies_count_by_year(x, vacancies_count_by_year_df))
+     .pipe(lambda x: salary_by_city(x, salary_dynamic_by_city))
+     .pipe(lambda x: vacancies_percent_by_city(x, vacancies_percent)))
 
 
-def fill_dicts_filtered_vacancies(salary_dynamics, vacancies_count):
+def fill_dicts_filtered_vacancies(salary_dynamics, vacancies_count, salary_dynamic_by_city, vacancies_percent):
     filtered_vacancies = pd.read_csv("filtered_vacancies.csv")
     (filtered_vacancies
      [(filtered_vacancies.salary_currency == "RUR")]
      .pipe(fill_mean_salary)
      .pipe(lambda x: salary_dynamic_by_year_and_key(x, salary_dynamics))
-     .pipe(lambda x: vacancies_count_by_year_and_key(x, vacancies_count)))
+     .pipe(lambda x: vacancies_count_by_year_and_key(x, vacancies_count))
+     .pipe(lambda x: salary_by_city(x, salary_dynamic_by_city))
+     .pipe(lambda x: vacancies_percent_by_city(x, vacancies_percent)))
 
 
-def build_barhs():
+def build_barhs_demand():
     fig, ax = plt.subplots(2, 2, figsize=(10, 8))
     df = pd.DataFrame(SALARY_DYNAMIC_BY_YEAR_DICT.items(), columns=['year', 'sec_value'])
     ax[0][0].barh(df['year'].apply(str), df['sec_value'])
@@ -172,19 +178,58 @@ def build_barhs():
     plt.savefig('demand.png')
 
 
+def build_barhs_geography():
+    fig, ax = plt.subplots(2, 2, figsize=(10, 8))
+    df = pd.DataFrame(SALARY_DYNAMIC_BY_CITY.items(), columns=['city', 'sec_value'])
+    df.sort_values('sec_value', inplace=True)
+    ax[0][0].barh(df['city'], df['sec_value'])
+    ax[0][0].set_title('Уровень зарплат по городам', fontsize=12)
+
+    df = pd.DataFrame(SALARY_DYNAMIC_BY_CITY_AND_KEY.items(), columns=['city', 'sec_value'])
+    df.sort_values('sec_value', inplace=True)
+    ax[0][1].barh(df['city'], df['sec_value'])
+    ax[0][1].set_title('Уровень зарплат по городам для выбранной профессии', fontsize=9)
+
+    df = pd.DataFrame(VACANCIES_PERCENT_BY_CITY.items(), columns=['city', 'sec_value'])
+    df.sort_values('sec_value', inplace=True)
+    ax[1][0].barh(df['city'], df['sec_value'])
+    ax[1][0].set_title('Доля вакансий по городам', fontsize=12)
+
+    df = pd.DataFrame(VACANCIES_PERCENT_BY_CITY_AND_KEY.items(), columns=['city', 'sec_value'])
+    df.sort_values('sec_value', inplace=True)
+    ax[1][1].barh(df['city'], df['sec_value'])
+    ax[1][1].set_title('Доля вакансий по городам для выбранной профессии', fontsize=8)
+
+    plt.suptitle("Востребованность в городах")
+    plt.tight_layout()
+    plt.savefig('geography.png')
+
+
 def get_demand_info():
     # Запускаем в отдельных потоках, чтобы было быстрее
     processes = [threading.Thread(target=fill_dicts_all_vacancies, args=(SALARY_DYNAMIC_BY_YEAR_DICT,
-                                                                         VACANCIES_COUNT_BY_YEAR_DICT)),
+                                                                         VACANCIES_COUNT_BY_YEAR_DICT,
+                                                                         SALARY_DYNAMIC_BY_CITY,
+                                                                         VACANCIES_PERCENT_BY_CITY)),
                  threading.Thread(target=fill_dicts_filtered_vacancies, args=(SALARY_DYNAMIC_BY_YEAR_AND_KEY_DICT,
-                                                                              VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT))
+                                                                              VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT,
+                                                                              SALARY_DYNAMIC_BY_CITY_AND_KEY,
+                                                                              VACANCIES_PERCENT_BY_CITY_AND_KEY))
                  ]
     for process in processes:
         process.start()
     for process in processes:
         process.join()
+
+    print(SALARY_DYNAMIC_BY_CITY_AND_KEY)
+    print(VACANCIES_PERCENT_BY_CITY_AND_KEY)
+
+    print(SALARY_DYNAMIC_BY_CITY)
+    print(VACANCIES_PERCENT_BY_CITY)
+
     # Сохраняем графики
-    build_barhs()
+    # build_barhs_demand()
+    build_barhs_geography()
 
 
 get_demand_info()
