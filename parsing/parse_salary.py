@@ -181,6 +181,11 @@ def build_barhs_demand():
     plt.savefig('demand.png')
 
 
+def create_csv_file_from_dict(input_dict, file_name, columns_names):
+    df = pd.DataFrame(list(input_dict.items()), columns=columns_names)
+    df.to_csv(file_name, index=False)
+
+
 def build_barhs_geography():
     fig, ax = plt.subplots(2, 2, figsize=(10, 8))
     df = pd.DataFrame(SALARY_DYNAMIC_BY_CITY.items(), columns=['city', 'sec_value'])
@@ -224,8 +229,31 @@ def get_demand_info():
     for process in processes:
         process.join()
 
-    print(SALARY_DYNAMIC_BY_CITY_AND_KEY)
-    print(VACANCIES_PERCENT_BY_CITY_AND_KEY)
+    create_csv_file_from_dict(SALARY_DYNAMIC_BY_YEAR_AND_KEY_DICT,
+                              './parsed_info/salary_dynamics_by_year_and_key.csv',
+                              ['Год', 'Зарплата'])
+    create_csv_file_from_dict(VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT,
+                              './parsed_info/vacancies_count_by_year_and_key.csv',
+                              ['Год', 'Доля вакансий'])
+    create_csv_file_from_dict(SALARY_DYNAMIC_BY_CITY_AND_KEY,
+                              './parsed_info/salary_dynamics_by_city_and_key.csv',
+                              ['Город', 'Зарплата'])
+    create_csv_file_from_dict(VACANCIES_PERCENT_BY_CITY_AND_KEY,
+                              './parsed_info/vacancies_percent_by_city_and_key.csv',
+                              ['Город', 'Доля вакансий'])
+
+    create_csv_file_from_dict(SALARY_DYNAMIC_BY_YEAR_DICT,
+                              './parsed_info/salary_dynamics_by_year.csv',
+                              ['Год', 'Зарплата'])
+    create_csv_file_from_dict(VACANCIES_COUNT_BY_YEAR_DICT,
+                              './parsed_info/vacancies_count_by_year.csv',
+                              ['Год', 'Доля вакансий'])
+    create_csv_file_from_dict(SALARY_DYNAMIC_BY_CITY,
+                              './parsed_info/salary_dynamics_by_city.csv',
+                              ['Город', 'Зарплата'])
+    create_csv_file_from_dict(VACANCIES_PERCENT_BY_CITY,
+                              './parsed_info/vacancies_percent_by_city.csv',
+                              ['Город', 'Доля вакансий'])
 
     print(SALARY_DYNAMIC_BY_CITY)
     print(VACANCIES_PERCENT_BY_CITY)

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fadb21e5-e35b-414c-8c05-0f03fb104a19" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RTF-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RTF-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/demand.png" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/demand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/geography.png" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/geography.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/parse_salary.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/parse_salary.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +84,7 @@
       <workItem from="1705433946010" duration="398000" />
       <workItem from="1705520377179" duration="724000" />
       <workItem from="1705597042473" duration="4120000" />
+      <workItem from="1705601732643" duration="1218000" />
     </task>
     <servers />
   </component>
@@ -124,6 +128,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RTF_project$parse_hh_vacancies.coverage" NAME="parse_hh_vacancies Coverage Results" MODIFIED="1705601199740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
     <SUITE FILE_PATH="coverage/RTF_project$parse_key_skills.coverage" NAME="parse_key_skills Coverage Results" MODIFIED="1705519232952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
-    <SUITE FILE_PATH="coverage/RTF_project$parse_salary.coverage" NAME="parse_salary Coverage Results" MODIFIED="1705516294683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
+    <SUITE FILE_PATH="coverage/RTF_project$parse_salary.coverage" NAME="parse_salary Coverage Results" MODIFIED="1705602952945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
   </component>
 </project>
