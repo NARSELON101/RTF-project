@@ -3,6 +3,7 @@ import math
 import threading
 import pandas as pd
 import matplotlib.pyplot as plt
+from utils.get_currency import df_get_currency
 
 SALARY_DYNAMIC_BY_YEAR_DICT = {}
 VACANCIES_COUNT_BY_YEAR_DICT = {}
@@ -21,15 +22,20 @@ def format_date(text):
 
 
 def fill_mean_salary(df_):
+    currency_df_ = pd.read_csv("./parsed_info/cb_currency.csv", index_col='date')
+
+    df_['published_at'] = df_['published_at'].apply(lambda x: datetime.datetime.strptime(x, "%Y-%m-%dT%H:%M:%S%z"))
+
+    df_["currency_val"] = df_.apply(df_get_currency(currency_df_), axis=1)
     df_['salary_to'] = df_['salary_to'].fillna(df_['salary_from'])
     df_['salary_from'] = df_['salary_from'].fillna(df_['salary_to'])
 
-    df_["mean_salary"] = (df_.salary_to + df_.salary_from) / 2
+    df_["mean_salary"] = (df_.salary_to + df_.salary_from) / 2 * df_['currency_val']
     return df_
 
 
 def salary_dynamic_by_year(df_, salary_dynamics_by_year):
-    df_['published_at'] = df_['published_at'].apply(format_date).apply(int)
+    df_['published_at'] = df_['published_at'].apply(lambda x: x.strftime("%Y")).apply(int)
     salary_dynamics = (df_
                        .groupby('published_at')
                        ['mean_salary']
@@ -52,10 +58,9 @@ def vacancies_count_by_year(df_, vacancies_count_by_year):
 
 
 def salary_dynamic_by_year_and_key(df_, salary_dynamics_dict):
-    df_['published_at'] = df_['published_at'].apply(format_date).apply(int)
+    df_['published_at'] = df_['published_at'].apply(lambda x: x.strftime("%Y")).apply(int)
 
     years_list = df_['published_at'].unique()
-
     salary_dynamics = (df_
                        .groupby('published_at')
                        ['mean_salary']
@@ -134,9 +139,8 @@ def vacancies_percent_by_city(df_, vacancies_percent_by_city_dict):
 
 def fill_dicts_all_vacancies(salary_dynamics_by_year, vacancies_count_by_year_df,
                              salary_dynamic_by_city, vacancies_percent):
-    all_vacancies = pd.read_csv("vacancies.csv")
+    all_vacancies = pd.read_csv("vacancies.csv", low_memory=False)
     (all_vacancies
-     [(all_vacancies.salary_currency == "RUR")]
      .pipe(fill_mean_salary)
      .pipe(lambda x: salary_dynamic_by_year(x, salary_dynamics_by_year))
      .pipe(lambda x: vacancies_count_by_year(x, vacancies_count_by_year_df))
@@ -145,9 +149,8 @@ def fill_dicts_all_vacancies(salary_dynamics_by_year, vacancies_count_by_year_df
 
 
 def fill_dicts_filtered_vacancies(salary_dynamics, vacancies_count, salary_dynamic_by_city, vacancies_percent):
-    filtered_vacancies = pd.read_csv("filtered_vacancies.csv")
+    filtered_vacancies = pd.read_csv("filtered_vacancies.csv", low_memory=False)
     (filtered_vacancies
-     [(filtered_vacancies.salary_currency == "RUR")]
      .pipe(fill_mean_salary)
      .pipe(lambda x: salary_dynamic_by_year_and_key(x, salary_dynamics))
      .pipe(lambda x: vacancies_count_by_year_and_key(x, vacancies_count))
@@ -228,7 +231,7 @@ def get_demand_info():
     print(VACANCIES_PERCENT_BY_CITY)
 
     # Сохраняем графики
-    # build_barhs_demand()
+    build_barhs_demand()
     build_barhs_geography()
 
 
