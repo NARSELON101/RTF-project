@@ -4,6 +4,7 @@ import threading
 import pandas as pd
 import matplotlib.pyplot as plt
 from utils.get_currency import df_get_currency
+import pretty_html_table
 
 SALARY_DYNAMIC_BY_YEAR_DICT = {}
 VACANCIES_COUNT_BY_YEAR_DICT = {}
@@ -178,12 +179,13 @@ def build_barhs_demand():
 
     plt.suptitle("Востребованность на рынке труда")
     plt.tight_layout()
-    plt.savefig('demand.png')
+    plt.savefig('../it_engeneer_vacancies/main/static/main/img/demand.png')
 
 
-def create_csv_file_from_dict(input_dict, file_name, columns_names):
+def create_html_table_file_from_dict(input_dict, file_name, columns_names):
     df = pd.DataFrame(list(input_dict.items()), columns=columns_names)
-    df.to_csv(file_name, index=False)
+    with open(file_name, 'w', encoding='utf-8-sig') as file:
+        file.write(pretty_html_table.build_table(df, 'grey_light'))
 
 
 def build_barhs_geography():
@@ -210,7 +212,7 @@ def build_barhs_geography():
 
     plt.suptitle("Востребованность в городах")
     plt.tight_layout()
-    plt.savefig('geography.png')
+    plt.savefig('../it_engeneer_vacancies/main/static/main/img/geography.png')
 
 
 def get_demand_info():
@@ -229,34 +231,32 @@ def get_demand_info():
     for process in processes:
         process.join()
 
-    create_csv_file_from_dict(SALARY_DYNAMIC_BY_YEAR_AND_KEY_DICT,
-                              './parsed_info/salary_dynamics_by_year_and_key.csv',
-                              ['Год', 'Зарплата'])
-    create_csv_file_from_dict(VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT,
-                              './parsed_info/vacancies_count_by_year_and_key.csv',
-                              ['Год', 'Доля вакансий'])
-    create_csv_file_from_dict(SALARY_DYNAMIC_BY_CITY_AND_KEY,
-                              './parsed_info/salary_dynamics_by_city_and_key.csv',
-                              ['Город', 'Зарплата'])
-    create_csv_file_from_dict(VACANCIES_PERCENT_BY_CITY_AND_KEY,
-                              './parsed_info/vacancies_percent_by_city_and_key.csv',
-                              ['Город', 'Доля вакансий'])
+    create_html_table_file_from_dict(SALARY_DYNAMIC_BY_YEAR_AND_KEY_DICT,
+                                     '../it_engeneer_vacancies/main/templates/main/salary_dynamics_by_year_and_key.html',
+                                     ['Год', 'Зарплата'])
+    create_html_table_file_from_dict(VACANCIES_COUNT_BY_YEAR_AND_KEY_DICT,
+                                     '../it_engeneer_vacancies/main/templates/main/vacancies_count_by_year_and_key.html',
+                                     ['Год', 'Доля вакансий'])
+    create_html_table_file_from_dict(SALARY_DYNAMIC_BY_CITY_AND_KEY,
+                                     '../it_engeneer_vacancies/main/templates/main/salary_dynamics_by_city_and_key.html',
+                                     ['Город', 'Зарплата'])
+    create_html_table_file_from_dict(VACANCIES_PERCENT_BY_CITY_AND_KEY,
+                                     '../it_engeneer_vacancies/main/templates/main/vacancies_percent_by_city_and_key.html',
+                                     ['Город', 'Доля вакансий'])
 
-    create_csv_file_from_dict(SALARY_DYNAMIC_BY_YEAR_DICT,
-                              './parsed_info/salary_dynamics_by_year.csv',
-                              ['Год', 'Зарплата'])
-    create_csv_file_from_dict(VACANCIES_COUNT_BY_YEAR_DICT,
-                              './parsed_info/vacancies_count_by_year.csv',
-                              ['Год', 'Доля вакансий'])
-    create_csv_file_from_dict(SALARY_DYNAMIC_BY_CITY,
-                              './parsed_info/salary_dynamics_by_city.csv',
-                              ['Город', 'Зарплата'])
-    create_csv_file_from_dict(VACANCIES_PERCENT_BY_CITY,
-                              './parsed_info/vacancies_percent_by_city.csv',
-                              ['Город', 'Доля вакансий'])
+    create_html_table_file_from_dict(SALARY_DYNAMIC_BY_YEAR_DICT,
+                                     '../it_engeneer_vacancies/main/templates/main/salary_dynamics_by_year.html',
+                                     ['Год', 'Зарплата'])
+    create_html_table_file_from_dict(VACANCIES_COUNT_BY_YEAR_DICT,
+                                     '../it_engeneer_vacancies/main/templates/main/vacancies_count_by_year.html',
+                                     ['Год', 'Доля вакансий'])
+    create_html_table_file_from_dict(SALARY_DYNAMIC_BY_CITY,
+                                     '../it_engeneer_vacancies/main/templates/main/salary_dynamics_by_city.html',
+                                     ['Город', 'Зарплата'])
+    create_html_table_file_from_dict(VACANCIES_PERCENT_BY_CITY,
+                                     '../it_engeneer_vacancies/main/templates/main/vacancies_percent_by_city.html',
+                                     ['Город', 'Доля вакансий'])
 
-    print(SALARY_DYNAMIC_BY_CITY)
-    print(VACANCIES_PERCENT_BY_CITY)
 
     # Сохраняем графики
     build_barhs_demand()

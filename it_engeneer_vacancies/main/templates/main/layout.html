@@ -9,13 +9,13 @@
      <link rel="stylesheet" href="{% static 'main/css/layout.css'%}">
  </head>
  <body>
- <header>
+ <header id="header-info">
      <h1>All about IT Engineers</h1>
- </header>>
+ </header>
      <aside>
          <span class="logo">Навигация</span>
          <ul>
-             <a href="{% url 'about'%}"><li>На главную</li></a>
+             <a href="{% url 'about' %}"><li>На главную</li></a>
              <a href="{% url 'about' %}"><li>Востребованность</li></a>
              <a href=""><li>География</li></a>
              <a href=""><li>Навыки</li></a>
@@ -26,6 +26,22 @@
         {% block content %}
         {% endblock %}
      </main>
-
+     <footer class="footer-element" style="color: white;
+                                           position: fixed;
+                                           margin-top: 2%;
+                                           height: 100px;
+                                           width: 100%;
+                                           text-align: center;
+                                           font-size: 0.8em;
+                                           bottom: 0;
+                                           background-color: #2c2c2c;
+                                           border-top: 2px solid #4d4d4d;
+                                           list-style: none;">
+         <ul style="list-style: none;
+             padding-top: 35px;">
+             <li style="list-style: none;">Куленюк Евгений Станиславович, РИ-220935</li>
+             <li style="padding-top: 5px;"><a href="https://github.com/NARSELON101/RTF-project">Ссылка на проект на Github</a></li>
+         </ul>
+     </footer>
  </body>
 </html>
