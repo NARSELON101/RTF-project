@@ -102,7 +102,6 @@ def salary_by_city(df_, salary_dynamic_by_city):
 
     vacancies_count = len(df_)
     vacancies_count_by_city = vacancies_count_by_city[(vacancies_count_by_city / vacancies_count) > 0.01]
-
     df_ = df_[df_['area_name'].isin(vacancies_count_by_city.index)]
     valid_cities_mean_salaries = df_.groupby("area_name")['mean_salary'].mean().apply(math.floor)
 
@@ -130,7 +129,7 @@ def vacancies_percent_by_city(df_, vacancies_percent_by_city_dict):
     vacancies_count_by_city = vacancies_count_by_city[(vacancies_count_by_city / vacancies_count) > 0.01]
 
     out_dict = (vacancies_count_by_city
-                .apply(lambda x: x / vacancies_count).to_dict())
+                .apply(lambda x: x / vacancies_count))
 
     out_dict = {key: round(value, 4) for key, value in out_dict.items()}
     out_dict = {key: value for key, value in sorted(out_dict.items(), key=lambda x: (x[1]), reverse=True)[0:10]}

@@ -12,7 +12,7 @@ aside {
     background: #181818;
     width: 20%;
     padding: 2.5%;
-    height: 200vh;
+    height: 420vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -57,8 +57,8 @@ main .features {
 
 main .features h1 {
     font-size: 50px;
-    min-width: 600px;
-    max-width: 800px;
+    width: 600px;
+    max-width: 1000px;
     border-bottom: 1px solid cornflowerblue;
     padding-bottom: 5px;
 }
@@ -66,6 +66,11 @@ main .features h1 {
 main .features h2 {
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 600px;
+}
+
+main .features h3 {
+    padding-top: 10px;
     min-width: 600px;
     max-width: 800px;
 }
@@ -95,4 +100,14 @@ main .features li {
   text-align: center;
   font-size: 0.8em;
   bottom: 0;
+}
+
+main .dataframe {
+    color: black;
+    min-width: 1000px;
+}
+
+main .features .vacancies {
+    float: none;
+    width: 1000px;
 }

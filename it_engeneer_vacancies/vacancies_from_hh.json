@@ -756,6 +756,102 @@
             "adv_context": null
         },
         {
+            "id": "91953903",
+            "premium": false,
+            "name": "Помощник системного администратора/IT инженер",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "78",
+                "name": "Самара",
+                "url": "https://api.hh.ru/areas/78"
+            },
+            "salary": {
+                "from": 49000,
+                "to": null,
+                "currency": "RUR",
+                "gross": true
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": {
+                "city": "Самара",
+                "street": "Дачная улица",
+                "building": "27А",
+                "lat": 53.198154,
+                "lng": 50.143609,
+                "description": null,
+                "raw": "Самара, Дачная улица, 27А",
+                "metro": null,
+                "metro_stations": [],
+                "id": "267391"
+            },
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2024-01-19T17:57:42+0300",
+            "created_at": "2024-01-19T17:57:42+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91953903",
+            "show_logo_in_search": null,
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/91953903?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/91953903",
+            "relations": [],
+            "employer": {
+                "id": "538229",
+                "name": "Самара Секьюрити Сервис",
+                "url": "https://api.hh.ru/employers/538229",
+                "alternate_url": "https://hh.ru/employer/538229",
+                "logo_urls": {
+                    "original": "https://hhcdn.ru/employer-logo-original/777929.png",
+                    "240": "https://hhcdn.ru/employer-logo/3552608.png",
+                    "90": "https://hhcdn.ru/employer-logo/3552607.png"
+                },
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=538229",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Среднее специальное техническое образование. Опыт работ. Аккуратность, продуктивность, ответственность, порядочность.",
+                "responsibility": "Обслуживание вычислительных сетей, обеспечение работы ПК на базе Windows, информационная и техническая поддержка пользователей. Администрирование 1С. Поддержание работы офисной..."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [
+                {
+                    "id": "from_four_to_six_hours_in_a_day",
+                    "name": "Можно работать сменами по 4–6 часов в день"
+                }
+            ],
+            "working_time_modes": [],
+            "accept_temporary": true,
+            "professional_roles": [
+                {
+                    "id": "114",
+                    "name": "Системный инженер"
+                }
+            ],
+            "accept_incomplete_resumes": false,
+            "experience": {
+                "id": "between1And3",
+                "name": "От 1 года до 3 лет"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false,
+            "adv_context": null
+        },
+        {
             "id": "91761125",
             "premium": false,
             "name": "Инженер-программист Python",
@@ -866,272 +962,6 @@
             "adv_context": null
         },
         {
-            "id": "91920388",
-            "premium": false,
-            "name": "IT Инженер/Devops-инженер",
-            "department": null,
-            "has_test": false,
-            "response_letter_required": false,
-            "area": {
-                "id": "208",
-                "name": "ОАЭ",
-                "url": "https://api.hh.ru/areas/208"
-            },
-            "salary": null,
-            "type": {
-                "id": "open",
-                "name": "Открытая"
-            },
-            "address": null,
-            "response_url": null,
-            "sort_point_distance": null,
-            "published_at": "2024-01-19T10:54:44+0300",
-            "created_at": "2024-01-19T10:54:44+0300",
-            "archived": false,
-            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91920388",
-            "branding": {
-                "type": "MAKEUP",
-                "tariff": null
-            },
-            "show_logo_in_search": true,
-            "insider_interview": null,
-            "url": "https://api.hh.ru/vacancies/91920388?host=hh.ru",
-            "alternate_url": "https://hh.ru/vacancy/91920388",
-            "relations": [],
-            "employer": {
-                "id": "3177",
-                "name": "Первый Бит",
-                "url": "https://api.hh.ru/employers/3177",
-                "alternate_url": "https://hh.ru/employer/3177",
-                "logo_urls": {
-                    "original": "https://hhcdn.ru/employer-logo-original/635336.png",
-                    "90": "https://hhcdn.ru/employer-logo/2982496.png",
-                    "240": "https://hhcdn.ru/employer-logo/2982497.png"
-                },
-                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=3177",
-                "accredited_it_employer": true,
-                "trusted": true
-            },
-            "snippet": {
-                "requirement": "Имеет опыт работы в качестве системного администратора с платформами Windows Server 2008R2+ и Linux (centos или ubuntu). ",
-                "responsibility": "Платформа: 1C 8.3. ОС: Windows2012R2 (Active Directory) и CentOS 7+. Автоматизация: ansible + powershell. "
-            },
-            "contacts": null,
-            "schedule": {
-                "id": "remote",
-                "name": "Удаленная работа"
-            },
-            "working_days": [],
-            "working_time_intervals": [],
-            "working_time_modes": [],
-            "accept_temporary": false,
-            "professional_roles": [
-                {
-                    "id": "113",
-                    "name": "Системный администратор"
-                }
-            ],
-            "accept_incomplete_resumes": false,
-            "experience": {
-                "id": "between1And3",
-                "name": "От 1 года до 3 лет"
-            },
-            "employment": {
-                "id": "full",
-                "name": "Полная занятость"
-            },
-            "adv_response_url": null,
-            "is_adv_vacancy": false,
-            "adv_context": null
-        },
-        {
-            "id": "91953903",
-            "premium": false,
-            "name": "Помощник системного администратора/IT инженер",
-            "department": null,
-            "has_test": false,
-            "response_letter_required": false,
-            "area": {
-                "id": "78",
-                "name": "Самара",
-                "url": "https://api.hh.ru/areas/78"
-            },
-            "salary": {
-                "from": 49000,
-                "to": null,
-                "currency": "RUR",
-                "gross": true
-            },
-            "type": {
-                "id": "open",
-                "name": "Открытая"
-            },
-            "address": {
-                "city": "Самара",
-                "street": "Дачная улица",
-                "building": "27А",
-                "lat": 53.198154,
-                "lng": 50.143609,
-                "description": null,
-                "raw": "Самара, Дачная улица, 27А",
-                "metro": null,
-                "metro_stations": [],
-                "id": "267391"
-            },
-            "response_url": null,
-            "sort_point_distance": null,
-            "published_at": "2024-01-19T17:57:42+0300",
-            "created_at": "2024-01-19T17:57:42+0300",
-            "archived": false,
-            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91953903",
-            "show_logo_in_search": null,
-            "insider_interview": null,
-            "url": "https://api.hh.ru/vacancies/91953903?host=hh.ru",
-            "alternate_url": "https://hh.ru/vacancy/91953903",
-            "relations": [],
-            "employer": {
-                "id": "538229",
-                "name": "Самара Секьюрити Сервис",
-                "url": "https://api.hh.ru/employers/538229",
-                "alternate_url": "https://hh.ru/employer/538229",
-                "logo_urls": {
-                    "original": "https://hhcdn.ru/employer-logo-original/777929.png",
-                    "240": "https://hhcdn.ru/employer-logo/3552608.png",
-                    "90": "https://hhcdn.ru/employer-logo/3552607.png"
-                },
-                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=538229",
-                "accredited_it_employer": false,
-                "trusted": true
-            },
-            "snippet": {
-                "requirement": "Среднее специальное техническое образование. Опыт работ. Аккуратность, продуктивность, ответственность, порядочность.",
-                "responsibility": "Обслуживание вычислительных сетей, обеспечение работы ПК на базе Windows, информационная и техническая поддержка пользователей. Администрирование 1С. Поддержание работы офисной..."
-            },
-            "contacts": null,
-            "schedule": {
-                "id": "fullDay",
-                "name": "Полный день"
-            },
-            "working_days": [],
-            "working_time_intervals": [
-                {
-                    "id": "from_four_to_six_hours_in_a_day",
-                    "name": "Можно работать сменами по 4–6 часов в день"
-                }
-            ],
-            "working_time_modes": [],
-            "accept_temporary": true,
-            "professional_roles": [
-                {
-                    "id": "114",
-                    "name": "Системный инженер"
-                }
-            ],
-            "accept_incomplete_resumes": false,
-            "experience": {
-                "id": "between1And3",
-                "name": "От 1 года до 3 лет"
-            },
-            "employment": {
-                "id": "full",
-                "name": "Полная занятость"
-            },
-            "adv_response_url": null,
-            "is_adv_vacancy": false,
-            "adv_context": null
-        },
-        {
-            "id": "91253944",
-            "premium": false,
-            "name": "Инженер-программист",
-            "department": null,
-            "has_test": false,
-            "response_letter_required": false,
-            "area": {
-                "id": "2",
-                "name": "Санкт-Петербург",
-                "url": "https://api.hh.ru/areas/2"
-            },
-            "salary": {
-                "from": 70000,
-                "to": 90000,
-                "currency": "RUR",
-                "gross": false
-            },
-            "type": {
-                "id": "open",
-                "name": "Открытая"
-            },
-            "address": {
-                "city": "Санкт-Петербург",
-                "street": "Большой Смоленский проспект",
-                "building": "15к2",
-                "lat": 59.896192,
-                "lng": 30.396815,
-                "description": null,
-                "raw": "Санкт-Петербург, Большой Смоленский проспект, 15к2",
-                "metro": null,
-                "metro_stations": [],
-                "id": "2953826"
-            },
-            "response_url": null,
-            "sort_point_distance": null,
-            "published_at": "2024-01-19T08:36:45+0300",
-            "created_at": "2024-01-19T08:36:45+0300",
-            "archived": false,
-            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91253944",
-            "show_logo_in_search": null,
-            "insider_interview": null,
-            "url": "https://api.hh.ru/vacancies/91253944?host=hh.ru",
-            "alternate_url": "https://hh.ru/vacancy/91253944",
-            "relations": [],
-            "employer": {
-                "id": "2505348",
-                "name": "Кингисеппский Машиностроительный завод",
-                "url": "https://api.hh.ru/employers/2505348",
-                "alternate_url": "https://hh.ru/employer/2505348",
-                "logo_urls": {
-                    "original": "https://hhcdn.ru/employer-logo-original/1147400.jpg",
-                    "240": "https://hhcdn.ru/employer-logo/6210166.jpeg",
-                    "90": "https://hhcdn.ru/employer-logo/6210165.jpeg"
-                },
-                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2505348",
-                "accredited_it_employer": false,
-                "trusted": true
-            },
-            "snippet": {
-                "requirement": "Желателен опыт работы в программе NX. Желателен опыт работы в механообрабатывающем производстве со станками ЧПУ, в должности наладчика/технолога.",
-                "responsibility": "Написание программ механической обработки литейной дерево-модельной и пенополистирольной оснастки на станках с ЧПУ. Контроль качества изготовления оснастки."
-            },
-            "contacts": null,
-            "schedule": {
-                "id": "fullDay",
-                "name": "Полный день"
-            },
-            "working_days": [],
-            "working_time_intervals": [],
-            "working_time_modes": [],
-            "accept_temporary": false,
-            "professional_roles": [
-                {
-                    "id": "96",
-                    "name": "Программист, разработчик"
-                }
-            ],
-            "accept_incomplete_resumes": false,
-            "experience": {
-                "id": "noExperience",
-                "name": "Нет опыта"
-            },
-            "employment": {
-                "id": "full",
-                "name": "Полная занятость"
-            },
-            "adv_response_url": null,
-            "is_adv_vacancy": false,
-            "adv_context": null
-        },
-        {
             "id": "91930707",
             "premium": false,
             "name": "Инженер разработчик РЭА для АСУ ТП",
@@ -1202,6 +1032,85 @@
             "experience": {
                 "id": "between3And6",
                 "name": "От 3 до 6 лет"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false,
+            "adv_context": null
+        },
+        {
+            "id": "91920388",
+            "premium": false,
+            "name": "IT Инженер/Devops-инженер",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "208",
+                "name": "ОАЭ",
+                "url": "https://api.hh.ru/areas/208"
+            },
+            "salary": null,
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": null,
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2024-01-19T10:54:44+0300",
+            "created_at": "2024-01-19T10:54:44+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91920388",
+            "branding": {
+                "type": "MAKEUP",
+                "tariff": null
+            },
+            "show_logo_in_search": true,
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/91920388?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/91920388",
+            "relations": [],
+            "employer": {
+                "id": "3177",
+                "name": "Первый Бит",
+                "url": "https://api.hh.ru/employers/3177",
+                "alternate_url": "https://hh.ru/employer/3177",
+                "logo_urls": {
+                    "original": "https://hhcdn.ru/employer-logo-original/635336.png",
+                    "90": "https://hhcdn.ru/employer-logo/2982496.png",
+                    "240": "https://hhcdn.ru/employer-logo/2982497.png"
+                },
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=3177",
+                "accredited_it_employer": true,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Имеет опыт работы в качестве системного администратора с платформами Windows Server 2008R2+ и Linux (centos или ubuntu). ",
+                "responsibility": "Платформа: 1C 8.3. ОС: Windows2012R2 (Active Directory) и CentOS 7+. Автоматизация: ansible + powershell. "
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "remote",
+                "name": "Удаленная работа"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "113",
+                    "name": "Системный администратор"
+                }
+            ],
+            "accept_incomplete_resumes": false,
+            "experience": {
+                "id": "between1And3",
+                "name": "От 1 года до 3 лет"
             },
             "employment": {
                 "id": "full",
@@ -1317,6 +1226,97 @@
             "experience": {
                 "id": "between1And3",
                 "name": "От 1 года до 3 лет"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false,
+            "adv_context": null
+        },
+        {
+            "id": "91253944",
+            "premium": false,
+            "name": "Инженер-программист",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "2",
+                "name": "Санкт-Петербург",
+                "url": "https://api.hh.ru/areas/2"
+            },
+            "salary": {
+                "from": 70000,
+                "to": 90000,
+                "currency": "RUR",
+                "gross": false
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": {
+                "city": "Санкт-Петербург",
+                "street": "Большой Смоленский проспект",
+                "building": "15к2",
+                "lat": 59.896192,
+                "lng": 30.396815,
+                "description": null,
+                "raw": "Санкт-Петербург, Большой Смоленский проспект, 15к2",
+                "metro": null,
+                "metro_stations": [],
+                "id": "2953826"
+            },
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2024-01-20T14:45:07+0300",
+            "created_at": "2024-01-20T14:45:07+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91253944",
+            "show_logo_in_search": null,
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/91253944?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/91253944",
+            "relations": [],
+            "employer": {
+                "id": "2505348",
+                "name": "Кингисеппский Машиностроительный завод",
+                "url": "https://api.hh.ru/employers/2505348",
+                "alternate_url": "https://hh.ru/employer/2505348",
+                "logo_urls": {
+                    "original": "https://hhcdn.ru/employer-logo-original/1147400.jpg",
+                    "240": "https://hhcdn.ru/employer-logo/6210166.jpeg",
+                    "90": "https://hhcdn.ru/employer-logo/6210165.jpeg"
+                },
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=2505348",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": "Желателен опыт работы в программе NX. Желателен опыт работы в механообрабатывающем производстве со станками ЧПУ, в должности наладчика/технолога.",
+                "responsibility": "Написание программ механической обработки литейной дерево-модельной и пенополистирольной оснастки на станках с ЧПУ. Контроль качества изготовления оснастки."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "96",
+                    "name": "Программист, разработчик"
+                }
+            ],
+            "accept_incomplete_resumes": false,
+            "experience": {
+                "id": "noExperience",
+                "name": "Нет опыта"
             },
             "employment": {
                 "id": "full",
@@ -1560,81 +1560,6 @@
             "adv_context": null
         },
         {
-            "id": "91949831",
-            "premium": false,
-            "name": "Инженер-программист",
-            "department": null,
-            "has_test": false,
-            "response_letter_required": false,
-            "area": {
-                "id": "1007",
-                "name": "Брест",
-                "url": "https://api.hh.ru/areas/1007"
-            },
-            "salary": {
-                "from": 2000,
-                "to": null,
-                "currency": "BYR",
-                "gross": true
-            },
-            "type": {
-                "id": "open",
-                "name": "Открытая"
-            },
-            "address": null,
-            "response_url": null,
-            "sort_point_distance": null,
-            "published_at": "2024-01-19T17:12:57+0300",
-            "created_at": "2024-01-19T17:12:57+0300",
-            "archived": false,
-            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91949831",
-            "insider_interview": null,
-            "url": "https://api.hh.ru/vacancies/91949831?host=hh.ru",
-            "alternate_url": "https://hh.ru/vacancy/91949831",
-            "relations": [],
-            "employer": {
-                "id": "4930642",
-                "name": "Жабинковский комбикормовый завод",
-                "url": "https://api.hh.ru/employers/4930642",
-                "alternate_url": "https://hh.ru/employer/4930642",
-                "logo_urls": null,
-                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=4930642",
-                "accredited_it_employer": false,
-                "trusted": true
-            },
-            "snippet": {
-                "requirement": null,
-                "responsibility": "Доработка конфигураций, разработка нового функционала, написание новых отчётов, обработок, интеграция 1С со внешними системами, оптимизация производительности 1С."
-            },
-            "contacts": null,
-            "schedule": {
-                "id": "fullDay",
-                "name": "Полный день"
-            },
-            "working_days": [],
-            "working_time_intervals": [],
-            "working_time_modes": [],
-            "accept_temporary": false,
-            "professional_roles": [
-                {
-                    "id": "96",
-                    "name": "Программист, разработчик"
-                }
-            ],
-            "accept_incomplete_resumes": false,
-            "experience": {
-                "id": "noExperience",
-                "name": "Нет опыта"
-            },
-            "employment": {
-                "id": "full",
-                "name": "Полная занятость"
-            },
-            "adv_response_url": null,
-            "is_adv_vacancy": false,
-            "adv_context": null
-        },
-        {
             "id": "91683412",
             "premium": false,
             "name": "Ведущий инженер-программист (C++, Системное ПО)",
@@ -1815,9 +1740,84 @@
             "adv_response_url": null,
             "is_adv_vacancy": false,
             "adv_context": null
+        },
+        {
+            "id": "91949831",
+            "premium": false,
+            "name": "Инженер-программист",
+            "department": null,
+            "has_test": false,
+            "response_letter_required": false,
+            "area": {
+                "id": "1007",
+                "name": "Брест",
+                "url": "https://api.hh.ru/areas/1007"
+            },
+            "salary": {
+                "from": 2000,
+                "to": null,
+                "currency": "BYR",
+                "gross": true
+            },
+            "type": {
+                "id": "open",
+                "name": "Открытая"
+            },
+            "address": null,
+            "response_url": null,
+            "sort_point_distance": null,
+            "published_at": "2024-01-19T17:12:57+0300",
+            "created_at": "2024-01-19T17:12:57+0300",
+            "archived": false,
+            "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=91949831",
+            "insider_interview": null,
+            "url": "https://api.hh.ru/vacancies/91949831?host=hh.ru",
+            "alternate_url": "https://hh.ru/vacancy/91949831",
+            "relations": [],
+            "employer": {
+                "id": "4930642",
+                "name": "Жабинковский комбикормовый завод",
+                "url": "https://api.hh.ru/employers/4930642",
+                "alternate_url": "https://hh.ru/employer/4930642",
+                "logo_urls": null,
+                "vacancies_url": "https://api.hh.ru/vacancies?employer_id=4930642",
+                "accredited_it_employer": false,
+                "trusted": true
+            },
+            "snippet": {
+                "requirement": null,
+                "responsibility": "Доработка конфигураций, разработка нового функционала, написание новых отчётов, обработок, интеграция 1С со внешними системами, оптимизация производительности 1С."
+            },
+            "contacts": null,
+            "schedule": {
+                "id": "fullDay",
+                "name": "Полный день"
+            },
+            "working_days": [],
+            "working_time_intervals": [],
+            "working_time_modes": [],
+            "accept_temporary": false,
+            "professional_roles": [
+                {
+                    "id": "96",
+                    "name": "Программист, разработчик"
+                }
+            ],
+            "accept_incomplete_resumes": false,
+            "experience": {
+                "id": "noExperience",
+                "name": "Нет опыта"
+            },
+            "employment": {
+                "id": "full",
+                "name": "Полная занятость"
+            },
+            "adv_response_url": null,
+            "is_adv_vacancy": false,
+            "adv_context": null
         }
     ],
-    "found": 321,
+    "found": 327,
     "pages": 17,
     "page": 0,
     "per_page": 20,

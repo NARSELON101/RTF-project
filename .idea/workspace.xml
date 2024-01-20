@@ -6,25 +6,42 @@
   <component name="ChangeListManager">
     <list default="true" id="fadb21e5-e35b-414c-8c05-0f03fb104a19" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/it_engeneer_vacancies/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/it_engeneer_vacancies/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/static/main/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/static/main/css/layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/static/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/static/main/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/static/main/img/main2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/demand.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/demand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_city.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_city.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_city_and_key.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_city_and_key.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_year.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_year_and_key.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/salary_dynamics_by_year_and_key.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_count_by_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_count_by_year.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_count_by_year_and_key.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_count_by_year_and_key.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_percent_by_city.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_percent_by_city.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_percent_by_city_and_key.html" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/templates/main/vacancies_percent_by_city_and_key.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it_engeneer_vacancies/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/it_engeneer_vacancies/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/filtered_vacancies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/filtered_vacancies.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/parse_hh_vacancies.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/parse_hh_vacancies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parsing/parse_salary.py" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/parse_salary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/salary_dynamics_by_city.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/salary_dynamics_by_city_and_key.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/salary_dynamics_by_year.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/salary_dynamics_by_year_and_key.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/vacancies_count_by_year.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/vacancies_count_by_year_and_key.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/vacancies_percent_by_city.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/vacancies_percent_by_city_and_key.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/parsed_vacancies_from_hh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/parsed_info/parsed_vacancies_from_hh.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/salary_dynamics_by_year.html" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/parsed_info/salary_dynamics_by_year.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/parsed_info/vacancies_from_hh.json" beforeDir="false" afterPath="$PROJECT_DIR$/parsing/parsed_info/vacancies_from_hh.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parsing/utils/get_vacancies_from_hh.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +60,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/git/RTF-project/it_engeneer_vacancies/main/static/main/img",
+    "last_opened_file_path": "F:/git/RTF-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +72,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\git\RTF-project" />
+      <recent name="F:\git\RTF-project\it_engeneer_vacancies\parsing" />
       <recent name="F:\git\RTF-project\it_engeneer_vacancies\main\static\main\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -100,7 +119,8 @@
       <workItem from="1705520377179" duration="724000" />
       <workItem from="1705597042473" duration="4120000" />
       <workItem from="1705601732643" duration="2047000" />
-      <workItem from="1705666231814" duration="16157000" />
+      <workItem from="1705666231814" duration="16840000" />
+      <workItem from="1705731355017" duration="14843000" />
     </task>
     <servers />
   </component>
@@ -142,9 +162,15 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RTF_project$parse_hh_vacancies.coverage" NAME="parse_hh_vacancies Coverage Results" MODIFIED="1705601199740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
+    <SUITE FILE_PATH="coverage/RTF_project$views.coverage" NAME="views Coverage Results" MODIFIED="1705751333497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/it_engeneer_vacancies/main" />
+    <SUITE FILE_PATH="coverage/RTF_project$get_vacancies_from_hh.coverage" NAME="get_vacancies_from_hh Coverage Results" MODIFIED="1705751634855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/it_engeneer_vacancies/parsing/utils" />
+    <SUITE FILE_PATH="coverage/RTF_project$parse_hh_vacancies.coverage" NAME="parse_hh_vacancies Coverage Results" MODIFIED="1705750958495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
     <SUITE FILE_PATH="coverage/RTF_project$parse_key_skills.coverage" NAME="parse_key_skills Coverage Results" MODIFIED="1705519232952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
+    <SUITE FILE_PATH="coverage/RTF_project$urls.coverage" NAME="urls Coverage Results" MODIFIED="1705751096899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/it_engeneer_vacancies/main" />
+    <SUITE FILE_PATH="coverage/RTF_project$create_wordcloud_key_skills.coverage" NAME="create_wordcloud_key_skills Coverage Results" MODIFIED="1705738587170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing/utils" />
     <SUITE FILE_PATH="coverage/RTF_project$get_currency.coverage" NAME="get_currency Coverage Results" MODIFIED="1705682608415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing/utils" />
-    <SUITE FILE_PATH="coverage/RTF_project$parse_salary.coverage" NAME="parse_salary Coverage Results" MODIFIED="1705696592105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
+    <SUITE FILE_PATH="coverage/RTF_project$parse_salary.coverage" NAME="parse_salary Coverage Results" MODIFIED="1705738923486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing" />
+    <SUITE FILE_PATH="coverage/RTF_project$create_html_info_hh.coverage" NAME="create_html_info_hh Coverage Results" MODIFIED="1705750145370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing/utils" />
+    <SUITE FILE_PATH="coverage/RTF_project$create_html_table_key_skills.coverage" NAME="create_html_table_key_skills Coverage Results" MODIFIED="1705738352040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/parsing/utils" />
   </component>
 </project>
