@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Вакансии{% endblock %}
+<link rel="stylesheet" href="{% static 'main/css/vacancies.css'%}">
+{% block content %}
+    <div class="features">
+        <h1 style="width: 950px">Последние вакансии за 24 часа с hh.ru</h1>
+        <div class="vacancies">
+        {% block vacancies %}
+        {% endblock %}
+        </div>
+    </div>
+{% endblock %}

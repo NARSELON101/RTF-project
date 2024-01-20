@@ -1,0 +1,113 @@
+main head {
+    border-bottom: 2px solid #4d4d4d;
+    height: 400px;
+}
+
+body {
+    background-color: #2c2c2c;
+}
+
+aside {
+    float: left;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 420vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+    text-decoration: none;
+    border-bottom: 1px solid #4d4d4d;
+}
+
+aside ul a {
+    text-decoration: none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: cornflowerblue;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+
+main .features {
+    float: left;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 75px;
+}
+
+main .features h1 {
+    font-size: 50px;
+    width: 600px;
+    max-width: 1000px;
+    border-bottom: 1px solid cornflowerblue;
+    padding-bottom: 5px;
+}
+
+main .features h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 600px;
+}
+
+main .features h3 {
+    padding-top: 10px;
+    min-width: 600px;
+    max-width: 800px;
+}
+
+
+main .features p {
+    min-width: 800px;
+    max-width: 800px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+main .features ul {
+    width: 800px;
+}
+
+main .features li {
+    width: 800px;
+}
+
+.footer-element {
+  color: white;
+  position: fixed;
+  margin-top: 2%;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  bottom: 0;
+}
+
+main .dataframe {
+    color: black;
+    min-width: 1000px;
+}
+
+main .features .vacancies {
+    float: none;
+    width: 1000px;
+}
